@@ -1,7 +1,7 @@
-@import 'utils';
-@import 'fonts';
-@import 'typography';
+@import 'normalize.css';
 
-body {
-  background: $c-gray;
-}
+@import 'utils/index';
+
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/typography';
