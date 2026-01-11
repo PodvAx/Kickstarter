@@ -1,0 +1,108 @@
+.button {
+  cursor: pointer;
+
+  padding: 17px 40px;
+  border: none;
+
+  font-family: Helvetica-Neue, Inter, Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--primary-accent {
+    @include button-mixin(
+      $bg-color: $btn-color-accent-bg,
+      $hover-bg-color: $btn-color-accent-hover-bg,
+      $disabled-bg-color: $btn-color-accent-disabled-bg,
+      $text-color: $text-inverse-color
+    );
+  }
+
+  &--primary-neutral {
+    @include button-mixin(
+      $bg-color: $btn-color-neutral-bg,
+      $hover-bg-color: $btn-color-neutral-hover-bg,
+      $disabled-bg-color: $btn-color-neutral-disabled-bg,
+      $text-color: $text-inverse-color
+    );
+  }
+
+  &--secondary-accent {
+    @include button-mixin(
+      $bg-color: transparent,
+      $hover-bg-color: $btn-color-accent-hover-bg,
+      $disabled-bg-color: transparent,
+      $text-color: $text-accent-color,
+      $border: 1px solid $btn-color-accent-bg,
+      $text-hover-color: $text-inverse-color,
+      $disabled-text-color: $text-accent-disabled-color,
+      $disabled-border-color: $btn-color-accent-disabled-bg
+    );
+  }
+
+  &--secondary-neutral {
+    @include button-mixin(
+      $bg-color: transparent,
+      $hover-bg-color: $btn-color-neutral-hover-bg,
+      $disabled-bg-color: transparent,
+      $text-color: $text-primary-neutral-color,
+      $border: 1px solid $btn-color-neutral-bg,
+      $text-hover-color: $text-inverse-color,
+      $disabled-text-color: $text-lightest-color,
+      $disabled-border-color: $btn-color-neutral-disabled-bg
+    );
+  }
+
+  &--secondary-unbordered-accent {
+    padding: 0;
+    color: $text-accent-color;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+
+      display: block;
+
+      width: 40%;
+      height: 1px;
+      margin-top: 8px;
+
+      background-color: $btn-color-accent-bg;
+
+      transition: all 0.3s;
+    }
+
+    &:not(:disabled) {
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: $text-accent-disabled-color;
+      &::after {
+        background-color: $btn-color-accent-disabled-bg;
+      }
+    }
+  }
+
+  &--secondary-unbordered-neutral {
+    @include button-mixin(
+      $bg-color: transparent,
+      $hover-bg-color: transparent,
+      $disabled-bg-color: transparent,
+      $text-color: $text-secondary-color,
+      $border: 1px solid transparent,
+      $disabled-text-color: $text-lightest-color,
+      $hovered-border-color: $btn-color-neutral-hover-bg
+    );
+
+    font-weight: 400;
+  }
+}

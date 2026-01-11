@@ -1,6 +1,59 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin hover() {
+  transition: all 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin button-mixin(
+  $bg-color,
+  $hover-bg-color,
+  $disabled-bg-color,
+  $text-color,
+  $border: none,
+  $text-hover-color: none,
+  $disabled-text-color: none,
+  $disabled-border-color: none,
+  $hovered-border-color: none
+) {
+  border: $border;
+  color: $text-color;
+  background-color: $bg-color;
+
+  &:not(:disabled) {
+    @include hover {
+      @if $text-hover-color != none {
+        color: $text-hover-color;
+      }
+
+      @if $hovered-border-color != none {
+        border-color: $hovered-border-color;
+      }
+
+      background-color: $hover-bg-color;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $disabled-bg-color;
+
+    @if $disabled-border-color != none {
+      border-color: $disabled-border-color;
+    }
+
+    @if $disabled-text-color != none {
+      color: $disabled-text-color;
+    }
   }
 }
