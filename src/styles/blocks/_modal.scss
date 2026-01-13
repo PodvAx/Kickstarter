@@ -1,0 +1,72 @@
+.modal {
+  position: fixed;
+  z-index: $modal-z-index;
+  inset: 0;
+  display: none;
+
+  &--visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    position: relative;
+
+    max-width: 500px;
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+
+    background-color: #fff;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  &__close-button {
+    cursor: pointer;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 24px;
+    height: 24px;
+    border: none;
+
+    background: transparent;
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 11px;
+
+      width: 2px;
+      height: 24px;
+
+      background-color: $color-black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__title {
+    color: $text-primary-accent-color;
+  }
+
+  &__message {
+    color: $text-secondary-color;
+  }
+}

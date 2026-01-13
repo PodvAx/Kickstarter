@@ -1,0 +1,48 @@
+<!doctype html>
+<form
+  class="contact-form"
+  action="#"
+  method="post"
+  id="contact-form"
+>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    class="text-input"
+    placeholder="Your email"
+    autocomplete="email"
+    required
+  />
+  <textarea
+    name="message"
+    id="message"
+    class="text-input"
+    placeholder="Your message"
+  ></textarea>
+  <button
+    type="submit"
+    class="button button--primary-accent"
+  >
+    Send
+  </button>
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <h3 class="modal__title">Thanks for your message!</h3>
+      <p class="modal__message">
+        This message will not be sent to anyone because it is a demo.
+      </p>
+      <button
+        class="modal__close-button"
+        aria-label="Button to close modal"
+        type="button"
+        role="Close modal"
+      ></button>
+    </div>
+  </div>
+</form>
