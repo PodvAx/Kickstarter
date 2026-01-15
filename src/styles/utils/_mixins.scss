@@ -15,6 +15,18 @@
   }
 }
 
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
 @mixin button-mixin(
   $bg-color,
   $hover-bg-color,

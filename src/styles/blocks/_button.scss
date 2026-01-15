@@ -4,13 +4,9 @@
   padding: 17px 40px;
   border: none;
 
-  font-family: Helvetica-Neue, Inter, Roboto, sans-serif;
-  font-size: 12px;
   font-weight: 500;
-  line-height: 100%;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
 
   &--primary-accent {
     @include button-mixin(

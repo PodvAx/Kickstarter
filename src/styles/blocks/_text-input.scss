@@ -4,7 +4,7 @@
   padding: 12px clamp(1.3rem, 4vw, 2.4rem);
   border: 1px solid $border-input-default-color;
 
-  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-family: $primary-font-family;
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.5rem;
@@ -13,7 +13,7 @@
   outline: none;
 
   &::placeholder {
-    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-family: $primary-font-family;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -22,7 +22,7 @@
 
   &:focus {
     border-color: $border-input-selected-color;
-    font-family: Helvetica, Inter, Arial, sans-serif;
+    font-family: $secondary-font-family;
   }
 
   &:not(:disabled) {
