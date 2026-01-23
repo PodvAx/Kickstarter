@@ -6,6 +6,11 @@
 @import 'base/base';
 @import 'base/typography';
 
-@import 'blocks/button';
-@import 'blocks/text-input';
-@import 'blocks/modal';
+@import 'components/button';
+@import 'components/text-input';
+@import 'components/modal';
+@import 'components/logo';
+@import 'components/language-selector';
+
+@import 'blocks/page';
+@import 'blocks/header';

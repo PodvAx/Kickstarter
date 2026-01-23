@@ -1,0 +1,48 @@
+[
+  {
+    "class": "logo",
+    "attr": {
+      "aria-label": "Перейти на головну сторінку"
+    }
+  },
+  {
+    "id": "menu-btn",
+    "attr": {
+      "aria-label": "Відкрити меню"
+    }
+  },
+  {
+    "class": "header__title",
+    "innerHTML": "Футуристична Безпровідна Колонка"
+  },
+  {
+    "class": "header__text",
+    "innerHTML": "Звучання Luna збалансоване і плавне у всіх частотних діапазонах, що робить музику природно приємною і виразно багатошаровою."
+  },
+  {
+    "class": "header__specs-btn",
+    "attr": {
+      "aria-label": "Перейти до специфікацій"
+    },
+    "innerHTML": "Спец"
+  },
+  {
+    "id": "lng-btn-en",
+    "attr": {
+      "aria-label": "Змінити мову на Англійську"
+    }
+  },
+  {
+    "id": "lng-btn-ua",
+    "attr": {
+      "aria-label": "Змінити мову на українську"
+    }
+  },
+  {
+    "id": "buy-btn",
+    "attr": {
+      "aria-label": "Купити колонку Luna"
+    },
+    "innerHTML": "Купити"
+  }
+]

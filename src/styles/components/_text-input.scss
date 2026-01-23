@@ -12,6 +12,8 @@
 
   outline: none;
 
+  transition-property: border-color;
+
   &::placeholder {
     font-family: $primary-font-family;
     font-size: 1rem;
@@ -23,12 +25,6 @@
   &:focus {
     border-color: $border-input-selected-color;
     font-family: $secondary-font-family;
-  }
-
-  &:not(:disabled) {
-    @include hover {
-      border-color: $border-input-selected-color;
-    }
   }
 
   &:disabled {
@@ -51,5 +47,15 @@
     &::placeholder {
       color: $text-placehoder-success-color;
     }
+  }
+
+  @include base-interaction;
+
+  @include hover {
+    border-color: $border-input-selected-color;
+  }
+
+  @include active {
+    border-color: $border-input-selected-color;
   }
 }

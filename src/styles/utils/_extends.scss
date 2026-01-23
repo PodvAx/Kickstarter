@@ -9,6 +9,7 @@
   @extend %heading-base;
 
   font-size: 2.5rem;
+  line-height: 130%;
 
   @include respond-to(md) {
     font-size: 3rem;

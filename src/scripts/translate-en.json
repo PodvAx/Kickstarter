@@ -1,0 +1,48 @@
+[
+  {
+    "class": "logo",
+    "attr": {
+      "aria-label": "Go to the main page"
+    }
+  },
+  {
+    "id": "menu-btn",
+    "attr": {
+      "aria-label": "Open menu"
+    }
+  },
+  {
+    "class": "header__title",
+    "innerHTML": "Futuristic Wireless Speaker"
+  },
+  {
+    "class": "header__text",
+    "innerHTML": "Luna's performance is balanced and smooth in all frequency ranges which makes the music both naturally pleasant and distinctly more layered."
+  },
+  {
+    "class": "header__specs-btn",
+    "attr": {
+      "aria-label": "Go to specifications"
+    },
+    "innerHTML": "Specs"
+  },
+  {
+    "id": "lng-btn-en",
+    "attr": {
+      "aria-label": "Change language to English"
+    }
+  },
+  {
+    "id": "lng-btn-ua",
+    "attr": {
+      "aria-label": "Change language to Ukranian"
+    }
+  },
+  {
+    "id": "buy-btn",
+    "attr": {
+      "aria-label": "Buy Luna speaker"
+    },
+    "innerHTML": "Buy"
+  }
+]
