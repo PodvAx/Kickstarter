@@ -13,7 +13,7 @@
   },
   {
     "class": "header__title",
-    "innerHTML": "Futuristic</br>Wireless<br />Speaker<br />"
+    "innerHTML": "Futuristic Wireless Speaker"
   },
   {
     "class": "header__text",
@@ -37,5 +37,12 @@
     "attr": {
       "aria-label": "Change language to Ukranian"
     }
+  },
+  {
+    "id": "buy-btn",
+    "attr": {
+      "aria-label": "Buy Luna speaker"
+    },
+    "innerHTML": "Buy"
   }
 ]

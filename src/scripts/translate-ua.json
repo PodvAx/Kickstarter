@@ -13,7 +13,7 @@
   },
   {
     "class": "header__title",
-    "innerHTML": "Футуристична<br />Безпровідна<br />Колонка"
+    "innerHTML": "Футуристична Безпровідна Колонка"
   },
   {
     "class": "header__text",
@@ -37,5 +37,12 @@
     "attr": {
       "aria-label": "Змінити мову на українську"
     }
+  },
+  {
+    "id": "buy-btn",
+    "attr": {
+      "aria-label": "Купити колонку Luna"
+    },
+    "innerHTML": "Купити"
   }
 ]

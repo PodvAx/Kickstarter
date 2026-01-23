@@ -1,14 +1,22 @@
-@mixin hover() {
-  transition: all 0.3s;
+@mixin base-interaction {
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
 
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin hover() {
   @media (hover: hover) {
-    &:hover {
-      @content;
+    &:not(:disabled) {
+      &:hover {
+        @content;
+      }
     }
   }
+}
 
-  @media (hover: none) {
-    -webkit-tap-highlight-color: transparent;
+@mixin active() {
+  &:not(:disabled) {
     &:active {
       @content;
     }
@@ -27,7 +35,7 @@
   }
 }
 
-@mixin button-mixin(
+@mixin button-text(
   $bg-color,
   $hover-bg-color,
   $disabled-bg-color,
@@ -38,22 +46,39 @@
   $disabled-border-color: none,
   $hovered-border-color: none
 ) {
+  padding: 17px 40px;
   border: $border;
+
   color: $text-color;
+
   background-color: $bg-color;
 
-  &:not(:disabled) {
-    @include hover {
-      @if $text-hover-color != none {
-        color: $text-hover-color;
-      }
+  transition-property: color, border-color, background-color;
 
-      @if $hovered-border-color != none {
-        border-color: $hovered-border-color;
-      }
+  @include base-interaction;
 
-      background-color: $hover-bg-color;
+  @include hover {
+    @if $text-hover-color != none {
+      color: $text-hover-color;
     }
+
+    @if $hovered-border-color != none {
+      border-color: $hovered-border-color;
+    }
+
+    background-color: $hover-bg-color;
+  }
+
+  @include active {
+    @if $text-hover-color != none {
+      color: $text-hover-color;
+    }
+
+    @if $hovered-border-color != none {
+      border-color: $hovered-border-color;
+    }
+
+    background-color: $hover-bg-color;
   }
 
   &:disabled {

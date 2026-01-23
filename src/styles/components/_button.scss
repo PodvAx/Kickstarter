@@ -1,15 +1,65 @@
 .button {
   cursor: pointer;
 
-  padding: 17px 40px;
   border: none;
 
+  font-family: $secondary-font-family;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
 
+  &--thirdary {
+    padding: 0;
+
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    background-color: transparent;
+
+    transition-property: color, text-shadow;
+
+    @include base-interaction;
+    @include hover {
+      color: $text-primary-neutral-color;
+      text-shadow:
+        0.5px 0 0 $text-primary-neutral-color,
+        -0.5px 0 0 $text-primary-neutral-color;
+    }
+    @include active {
+      color: $text-primary-neutral-color;
+      text-shadow:
+        0.5px 0 0 $text-primary-neutral-color,
+        -0.5px 0 0 $text-primary-neutral-color;
+    }
+  }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    background-color: transparent;
+
+    transition-property: transform;
+
+    @include base-interaction;
+    @include hover {
+      transform: scale(1.2);
+    }
+
+    @include active {
+      transform: scale(0.8);
+    }
+  }
+
   &--primary-accent {
-    @include button-mixin(
+    @include button-text(
       $bg-color: $btn-color-accent-bg,
       $hover-bg-color: $btn-color-accent-hover-bg,
       $disabled-bg-color: $btn-color-accent-disabled-bg,
@@ -18,7 +68,7 @@
   }
 
   &--primary-neutral {
-    @include button-mixin(
+    @include button-text(
       $bg-color: $btn-color-neutral-bg,
       $hover-bg-color: $btn-color-neutral-hover-bg,
       $disabled-bg-color: $btn-color-neutral-disabled-bg,
@@ -27,7 +77,7 @@
   }
 
   &--secondary-accent {
-    @include button-mixin(
+    @include button-text(
       $bg-color: transparent,
       $hover-bg-color: $btn-color-accent-hover-bg,
       $disabled-bg-color: transparent,
@@ -40,7 +90,7 @@
   }
 
   &--secondary-neutral {
-    @include button-mixin(
+    @include button-text(
       $bg-color: transparent,
       $hover-bg-color: $btn-color-neutral-hover-bg,
       $disabled-bg-color: transparent,
@@ -68,14 +118,19 @@
 
       background-color: $btn-color-accent-bg;
 
-      transition: all 0.3s;
+      transition-property: width;
+      @include base-interaction;
     }
 
-    &:not(:disabled) {
-      @include hover {
-        &::after {
-          width: 100%;
-        }
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include active {
+      &::after {
+        width: 100%;
       }
     }
 
@@ -89,7 +144,7 @@
   }
 
   &--secondary-unbordered-neutral {
-    @include button-mixin(
+    @include button-text(
       $bg-color: transparent,
       $hover-bg-color: transparent,
       $disabled-bg-color: transparent,
