@@ -2,91 +2,84 @@
 import translationEnglish from './translate-en.json';
 import translationUkrainian from './translate-ua.json';
 
-const LNG_BTN_EN_ID = 'lng-btn-en';
-const LNG_BTN_UA_ID = 'lng-btn-ua';
+const DATA_ACTION_TRANSLATE_EN = 'translate-en';
+const DATA_ACTION_TRANSLATE_UA = 'translate-ua';
+const DATA_TRANSLATE_PREFIX = 'data-translate-';
+const ATTR_DATA_TRANSLATE_VARS = `${DATA_TRANSLATE_PREFIX}vars`;
 const CLASS_SELECTED_LNG_BTN = 'language-selector__button--selected';
 const KEY_EN = 'en';
 const KEY_UA = 'ua';
 const STORAGE_LANG_KEY = 'pref-lang';
 
-const languageEnBtn = document.getElementById(LNG_BTN_EN_ID);
-const languageUaBtn = document.getElementById(LNG_BTN_UA_ID);
+const languageEnBtns = document.querySelectorAll(
+  `[data-action="${DATA_ACTION_TRANSLATE_EN}"]`,
+);
+const languageUaBtns = document.querySelectorAll(
+  `[data-action="${DATA_ACTION_TRANSLATE_UA}"]`,
+);
 
 const LANG_BUTTONS = {
-  [KEY_EN]: languageEnBtn,
-  [KEY_UA]: languageUaBtn,
+  [KEY_EN]: languageEnBtns,
+  [KEY_UA]: languageUaBtns,
+};
+
+const TRANSLATE_TARGETS = {
+  text: 'textContent',
+  'aria-label': 'aria-label',
+  placeholder: 'placeholder',
+  alt: 'alt',
 };
 
 let currentLang = null;
 
-if (!languageEnBtn || !languageUaBtn) {
+if (!languageEnBtns.length || !languageUaBtns.length) {
   console.error('Language buttons not found in DOM');
 }
 
-const getSelector = (id, className) => {
-  if (id) {
-    return `#${id}`;
-  }
-
-  if (className) {
-    return `.${className}`;
-  }
-
-  return null;
+const getValue = (key, dictionary) => {
+  return key.split('.').reduce((obj, part) => {
+    return obj && obj[part] ? obj[part] : null;
+  }, dictionary);
 };
 
 const translate = (lang) => {
   const dictionary =
     lang === KEY_UA ? translationUkrainian : translationEnglish;
 
-  if (!Array.isArray(dictionary)) {
-    console.error('Translation dictionary is not an array');
+  Object.entries(TRANSLATE_TARGETS).forEach(([dataKey, target]) => {
+    document
+      .querySelectorAll(`[${DATA_TRANSLATE_PREFIX}${dataKey}]`)
+      .forEach((el) => {
+        const key = el.getAttribute(`${DATA_TRANSLATE_PREFIX}${dataKey}`);
+        const vars = el.hasAttribute(ATTR_DATA_TRANSLATE_VARS)
+          ? JSON.parse(el.getAttribute(ATTR_DATA_TRANSLATE_VARS))
+          : {};
+        let value = getValue(key, dictionary);
 
-    return;
-  }
+        if (!value) {
+          return;
+        }
 
-  dictionary.forEach(({ class: className, id, attr, innerHTML }) => {
-    const selector = getSelector(id, className);
+        Object.entries(vars).forEach(([varKey, varValue]) => {
+          const varTranslation = getValue(varValue, dictionary) || varValue;
 
-    if (!selector) {
-      console.warn('Translation entry has no id or class:', { id, className });
+          value = value.replaceAll(`{${varKey}}`, varTranslation);
+        });
 
-      return;
-    }
-
-    const htmlElement = document.querySelector(selector);
-
-    if (!htmlElement) {
-      console.warn('Element not found for selector:', selector);
-
-      return;
-    }
-
-    if (innerHTML) {
-      htmlElement.innerHTML = innerHTML;
-    }
-
-    if (attr) {
-      Object.entries(attr).forEach(([key, value]) => {
-        htmlElement.setAttribute(key, value);
+        if (target === 'textContent') {
+          el.textContent = value;
+        } else {
+          el.setAttribute(target, value);
+        }
       });
-    }
   });
 };
 
-const getDefaultLang = () => {
-  for (const [key, btn] of Object.entries(LANG_BUTTONS)) {
-    if (btn.classList.contains(CLASS_SELECTED_LNG_BTN)) {
-      return key;
-    }
-  }
-
-  return KEY_EN;
-};
-
 const updateLangBtns = (lang) => {
-  Object.entries(LANG_BUTTONS).forEach(([key, btn]) => {
-    btn.classList.toggle(CLASS_SELECTED_LNG_BTN, key === lang);
+  Object.entries(LANG_BUTTONS).forEach(([key, btns]) => {
+    btns.forEach((btn) => {
+      btn.classList.toggle(CLASS_SELECTED_LNG_BTN, key === lang);
+    });
   });
 };
 
@@ -96,7 +89,6 @@ const applyLang = (lang) => {
 
     return;
   }
-  console.log('call interaction with DOM');
   translate(lang);
   updateLangBtns(lang);
   currentLang = lang;
@@ -104,9 +96,11 @@ const applyLang = (lang) => {
 };
 
 const addBtnListeners = () => {
-  Object.entries(LANG_BUTTONS).forEach(([key, btn]) => {
-    btn.addEventListener('click', (e) => {
-      applyLang(key);
+  Object.entries(LANG_BUTTONS).forEach(([key, btns]) => {
+    btns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        applyLang(key);
+      });
     });
   });
 };
@@ -114,7 +108,7 @@ const addBtnListeners = () => {
 window.addEventListener('load', (e) => {
   const storedLang = localStorage?.getItem(STORAGE_LANG_KEY);
 
-  const lang = storedLang || getDefaultLang();
+  const lang = storedLang || KEY_EN;
 
   applyLang(lang);
 

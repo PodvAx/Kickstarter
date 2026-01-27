@@ -1,48 +1,40 @@
-[
-  {
-    "class": "logo",
-    "attr": {
-      "aria-label": "Go to the main page"
-    }
+{
+  "navigation": {
+    "goto": "Go to the {pageName} page",
+    "change-lng": "Change language to {lng}"
   },
-  {
-    "id": "menu-btn",
-    "attr": {
-      "aria-label": "Open menu"
-    }
+  "pages": {
+    "main": "Main",
+    "specs": "Specifications",
+    "about": "About Us",
+    "features": "Features",
+    "contact": "Contact",
+    "story": "Our Story"
   },
-  {
-    "class": "header__title",
-    "innerHTML": "Futuristic Wireless Speaker"
+  "languages": {
+    "en": "English",
+    "ua": "Ukrainian"
   },
-  {
-    "class": "header__text",
-    "innerHTML": "Luna's performance is balanced and smooth in all frequency ranges which makes the music both naturally pleasant and distinctly more layered."
+  "imgs": {
+    "logo": "CrazyBaby logo",
+    "menu": "Menu icon",
+    "luna-speaker": "Luna speaker img",
+    "close-icon": "Close icon"
   },
-  {
-    "class": "header__specs-btn",
-    "attr": {
-      "aria-label": "Go to specifications"
-    },
-    "innerHTML": "Specs"
+  "common": {
+    "buy": "Buy",
+    "open-menu": "Open menu",
+    "close-menu": "Close menu"
   },
-  {
-    "id": "lng-btn-en",
-    "attr": {
-      "aria-label": "Change language to English"
-    }
+  "special": {
+    "specs-btn": "Specs",
+    "buy-btn": "Buy Luna speaker",
+    "contact": "Get in Touch"
   },
-  {
-    "id": "lng-btn-ua",
-    "attr": {
-      "aria-label": "Change language to Ukranian"
-    }
+  "titles": {
+    "header": "Futuristic Wireless Speaker"
   },
-  {
-    "id": "buy-btn",
-    "attr": {
-      "aria-label": "Buy Luna speaker"
-    },
-    "innerHTML": "Buy"
+  "text": {
+    "header": "Luna’s performance is balanced and smooth in all frequency ranges which makes the music both naturally pleasant and distinctly more exciting."
   }
-]
+}
