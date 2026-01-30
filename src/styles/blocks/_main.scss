@@ -1,0 +1,11 @@
+.main {
+  &__nav {
+    display: none;
+
+    @include respond-to(lg) {
+      display: flex;
+      justify-content: center;
+      padding-block: 28px;
+    }
+  }
+}
