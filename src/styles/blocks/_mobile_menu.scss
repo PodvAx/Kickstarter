@@ -1,0 +1,54 @@
+.mobile-menu {
+  z-index: $z-index-last;
+
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  background-color: $page-bg-color;
+
+  animation:
+    fade-out 0.7s ease-out,
+    slide-out-left 0.7s ease-out;
+
+  &:open {
+    animation:
+      fade-in 0.7s ease-out,
+      slide-in-left 0.7s ease-out;
+  }
+
+  &__nav {
+    margin: 30px 30px 0;
+
+    @include respond-to(md) {
+      margin: 40px 0 0;
+    }
+  }
+
+  &__options {
+    display: flex;
+    gap: 20px;
+    margin: 50px 30px 0;
+
+    @include respond-to(md) {
+      display: none;
+    }
+  }
+
+  &__buy-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto 30px 30px;
+
+    @include respond-to(md) {
+      display: none;
+    }
+  }
+}
