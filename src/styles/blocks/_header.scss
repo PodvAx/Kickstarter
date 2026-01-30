@@ -60,19 +60,15 @@
   }
 
   &__static {
-    display: grid;
+    @include base-grid-column;
+
     grid-auto-rows: min-content;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
 
     @include respond-to(md) {
-      grid-template-columns: repeat(8, 1fr);
-      column-gap: 30px;
       margin-top: 130px;
     }
 
     @include respond-to(lg) {
-      grid-template-columns: repeat(12, 1fr);
       margin-top: 90px;
     }
   }
