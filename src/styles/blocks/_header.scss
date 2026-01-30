@@ -6,30 +6,22 @@
     padding: 22px 30px;
 
     @include respond-to(md) {
-      margin-bottom: 130px;
       padding: 0;
-    }
-
-    @include respond-to(lg) {
-      margin-bottom: 90px;
     }
   }
 
   &__picture {
     position: relative;
-    z-index: $in-back-z-index;
+    z-index: $z-index-zero;
 
     display: block;
     grid-column: 1 / -1;
     place-self: center;
 
-    margin-bottom: 40px;
-
     @include respond-to(md) {
       grid-column: 4 / -1;
       grid-row: 1 / span 2;
       place-self: end center;
-      margin-bottom: 0;
     }
 
     @include respond-to(lg) {
@@ -44,7 +36,7 @@
 
   &__title {
     grid-column: 1 / -1;
-    margin: 0 30px 20px;
+    margin: 40px 30px 0;
 
     @include respond-to(md) {
       grid-column: 1 / 5;
@@ -52,18 +44,18 @@
       align-self: end;
 
       max-width: 10ch;
-      margin: 0 0 30px;
+      margin: 0;
     }
   }
 
   &__text {
     grid-column: 1 / -1;
-    margin: 0 30px;
+    margin: 20px 30px 0;
 
     @include respond-to(md) {
       grid-column: 1 / 4;
       grid-row: 2 / span 1;
-      margin: 0;
+      margin: 30px 0 0;
     }
   }
 
@@ -76,10 +68,12 @@
     @include respond-to(md) {
       grid-template-columns: repeat(8, 1fr);
       column-gap: 30px;
+      margin-top: 130px;
     }
 
     @include respond-to(lg) {
       grid-template-columns: repeat(12, 1fr);
+      margin-top: 90px;
     }
   }
 
@@ -93,13 +87,12 @@
     display: none;
 
     @include respond-to(md) {
-      display: block;
+      display: flex;
     }
   }
 
   &__specs-btn {
     display: none;
-    color: $text-secondary-color;
 
     @include respond-to(md) {
       display: block;
