@@ -2,7 +2,7 @@
   resize: none;
 
   padding: 12px clamp(1.3rem, 4vw, 2.4rem);
-  border: 1px solid $border-input-default-color;
+  border: 1px solid $border-color-default-input;
 
   font-family: $primary-font-family;
   font-size: 0.9rem;
@@ -23,26 +23,26 @@
   }
 
   &:focus {
-    border-color: $border-input-selected-color;
+    border-color: $border-color-selected-input;
     font-family: $secondary-font-family;
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: $input-bg-color-disabled;
+    background-color: $bg-color-disabled-input;
   }
 
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
-    border-color: $border-input-selected-color;
-    box-shadow: 0 0 0 1000px $input-bg-color-autofill inset;
+    border-color: $border-color-selected-input;
+    box-shadow: 0 0 0 1000px $bg-color-autofill-input inset;
 
     -webkit-text-fill-color: $text-primary-neutral-color;
   }
 
   &--success {
-    border-color: $border-input-success-color;
+    border-color: $border-color-success-input;
 
     &::placeholder {
       color: $text-placehoder-success-color;
@@ -52,10 +52,10 @@
   @include base-interaction;
 
   @include hover {
-    border-color: $border-input-selected-color;
+    border-color: $border-color-selected-input;
   }
 
   @include active {
-    border-color: $border-input-selected-color;
+    border-color: $border-color-selected-input;
   }
 }

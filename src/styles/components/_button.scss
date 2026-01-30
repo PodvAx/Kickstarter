@@ -9,15 +9,11 @@
   text-decoration: none;
 
   &--thirdary {
+    @extend %thirdary-text;
+
     padding: 0;
-
-    font-size: 0.88rem;
-    font-weight: 300;
-    line-height: 100%;
-    text-transform: uppercase;
-
+    color: $text-secondary-color;
     background-color: transparent;
-
     transition-property: color, text-shadow;
 
     @include base-interaction;
@@ -60,18 +56,18 @@
 
   &--primary-accent {
     @include button-text(
-      $bg-color: $btn-color-accent-bg,
-      $hover-bg-color: $btn-color-accent-hover-bg,
-      $disabled-bg-color: $btn-color-accent-disabled-bg,
+      $bg-color: $bg-color-accent-btn,
+      $hover-bg-color: $bg-color-accent-hover-btn,
+      $disabled-bg-color: $bg-color-accent-disabled-btn,
       $text-color: $text-inverse-color
     );
   }
 
   &--primary-neutral {
     @include button-text(
-      $bg-color: $btn-color-neutral-bg,
-      $hover-bg-color: $btn-color-neutral-hover-bg,
-      $disabled-bg-color: $btn-color-neutral-disabled-bg,
+      $bg-color: $bg-color-neutral-btn,
+      $hover-bg-color: $bg-color-neutral-hover-btn,
+      $disabled-bg-color: $bg-color-neutral-disabled-btn,
       $text-color: $text-inverse-color
     );
   }
@@ -79,26 +75,26 @@
   &--secondary-accent {
     @include button-text(
       $bg-color: transparent,
-      $hover-bg-color: $btn-color-accent-hover-bg,
+      $hover-bg-color: $bg-color-accent-hover-btn,
       $disabled-bg-color: transparent,
       $text-color: $text-accent-color,
-      $border: 1px solid $btn-color-accent-bg,
+      $border: 1px solid $bg-color-accent-btn,
       $text-hover-color: $text-inverse-color,
       $disabled-text-color: $text-accent-disabled-color,
-      $disabled-border-color: $btn-color-accent-disabled-bg
+      $disabled-border-color: $bg-color-accent-disabled-btn
     );
   }
 
   &--secondary-neutral {
     @include button-text(
       $bg-color: transparent,
-      $hover-bg-color: $btn-color-neutral-hover-bg,
+      $hover-bg-color: $bg-color-neutral-hover-btn,
       $disabled-bg-color: transparent,
       $text-color: $text-primary-neutral-color,
-      $border: 1px solid $btn-color-neutral-bg,
+      $border: 1px solid $bg-color-neutral-btn,
       $text-hover-color: $text-inverse-color,
       $disabled-text-color: $text-lightest-color,
-      $disabled-border-color: $btn-color-neutral-disabled-bg
+      $disabled-border-color: $bg-color-neutral-disabled-btn
     );
   }
 
@@ -116,7 +112,7 @@
       height: 1px;
       margin-top: 8px;
 
-      background-color: $btn-color-accent-bg;
+      background-color: $bg-color-accent-btn;
 
       transition-property: width;
       @include base-interaction;
@@ -138,7 +134,7 @@
       cursor: not-allowed;
       color: $text-accent-disabled-color;
       &::after {
-        background-color: $btn-color-accent-disabled-bg;
+        background-color: $bg-color-accent-disabled-btn;
       }
     }
   }
@@ -151,7 +147,7 @@
       $text-color: $text-secondary-color,
       $border: 1px solid transparent,
       $disabled-text-color: $text-lightest-color,
-      $hovered-border-color: $btn-color-neutral-hover-bg
+      $hovered-border-color: $bg-color-neutral-hover-btn
     );
 
     font-weight: 400;

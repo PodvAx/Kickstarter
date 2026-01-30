@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  z-index: $modal-z-index;
+  z-index: $z-index-last;
   inset: 0;
   display: none;
 

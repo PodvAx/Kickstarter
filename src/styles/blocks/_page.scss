@@ -1,17 +1,27 @@
 .page {
   background-color: $page-bg-color;
 
+  &--no-scroll {
+    overflow: hidden;
+  }
+
   &__header {
     max-width: 1200px + 68px;
     margin-inline: auto;
 
     @include respond-to(md) {
-      margin-block: 30px 140px;
+      margin-top: 30px;
       padding-inline: min(4vw, 34px);
     }
+  }
 
-    @include respond-to(lg) {
-      margin-block: 30px 170px;
+  &__mobile-menu {
+    max-width: 1200px + 68px;
+    margin-inline: auto;
+
+    @include respond-to(md) {
+      padding-top: 39px;
+      padding-inline: min(4vw, 34px);
     }
   }
 }

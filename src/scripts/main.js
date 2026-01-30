@@ -7,12 +7,6 @@ const MODAL_CLASS = 'modal';
 const MODAL_ACTIVE_CLASS = 'modal--visible';
 const FOCUSABLE_MODAL_BUTTON_CLASS = 'modal__close-button';
 const MODAL_OVERLAY_CLASS = 'modal__overlay';
-// const MODAL_TITLE_CLASS = 'modal__title';
-// const MODAL_MESSAGE_CLASS = 'modal__message';
-// const MODAL_CLOSE_BTN_CLASS = 'modal__close-btn';
-// const MODEL_TITLE_TEXT = 'Thanks for your message!';
-// const MODAL_MESSAGE_TEXT =
-//   'This message will not be sent to anyone because it is a demo.';
 
 const contactForm = document.getElementById(FORM_ID);
 const formInputs = document.querySelectorAll(`.${INPUT_CLASS}`);
