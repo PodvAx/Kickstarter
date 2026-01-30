@@ -21,7 +21,9 @@
     "logo": "CrazyBaby logo",
     "menu": "Menu icon",
     "luna-speaker": "Luna speaker img",
-    "close-icon": "Close icon"
+    "close-icon": "Close icon",
+    "compass": "Compass icon",
+    "speaker": "Speaker icon"
   },
   "common": {
     "buy": "Buy",
@@ -33,9 +35,21 @@
     "contact": "Get in Touch"
   },
   "titles": {
-    "header": "Futuristic Wireless Speaker"
+    "header": "Futuristic Wireless Speaker",
+    "benefits": {
+      "design": "Futuristic Design",
+      "speaker": "Tweeter Speaker System",
+      "wifi": "Multiroom System",
+      "sun": "Intuitive Lighting System"
+    }
   },
   "text": {
-    "header": "Luna’s performance is balanced and smooth in all frequency ranges which makes the music both naturally pleasant and distinctly more exciting."
+    "header": "Luna’s performance is balanced and smooth in all frequency ranges which makes the music both naturally pleasant and distinctly more exciting.",
+    "benefits": {
+      "design": "To give Luna a truly flawless look, we specifically picked aircraft grade aluminum as its material and adopted both three-dimensional stretch-bending technology and a high precision cold forging technique.",
+      "speaker": "To deliver a more layered sound performance better than a sole full-range speaker, our team equipped Luna with one more tweeter speaker responsible for high-frequency sound independently.",
+      "wifi": "Luna is natively compatible with your home Wi-Fi. Set up multiple speakers in different rooms to expand your music experience into the entire house.",
+      "sun": "An intuitive user interface allows you to adjust the hue and saturation of color for lighting that fits any mood and situation."
+    }
   }
 }

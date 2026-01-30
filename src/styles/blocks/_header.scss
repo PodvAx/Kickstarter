@@ -60,7 +60,7 @@
   }
 
   &__static {
-    @include base-grid-column;
+    @extend %base-grid-column;
 
     grid-auto-rows: min-content;
 
