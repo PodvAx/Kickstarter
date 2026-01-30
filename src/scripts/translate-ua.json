@@ -1,7 +1,9 @@
 {
   "navigation": {
     "goto": "Перейти до сторінки {pageName}",
-    "change-lng": "Змінити мову на {lng}"
+    "change-lng": "Змінити мову на {lng}",
+    "open": "Відкрити {modal}",
+    "close": "Закрити {modal}"
   },
   "pages": {
     "main": "Головна",
@@ -23,8 +25,7 @@
   },
   "common": {
     "buy": "Купити",
-    "open-menu": "Відкрити меню",
-    "close-menu": "Закрити меню"
+    "menu": "Меню"
   },
   "special": {
     "specs-btn": "Спец.",

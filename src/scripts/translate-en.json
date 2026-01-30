@@ -1,7 +1,9 @@
 {
   "navigation": {
     "goto": "Go to the {pageName} page",
-    "change-lng": "Change language to {lng}"
+    "change-lng": "Change language to {lng}",
+    "open": "Open {modal}",
+    "close": "Close {modal}"
   },
   "pages": {
     "main": "Main",
@@ -23,8 +25,7 @@
   },
   "common": {
     "buy": "Buy",
-    "open-menu": "Open menu",
-    "close-menu": "Close menu"
+    "menu": "Menu"
   },
   "special": {
     "specs-btn": "Specs",
