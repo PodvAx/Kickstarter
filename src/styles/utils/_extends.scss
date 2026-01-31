@@ -100,7 +100,7 @@
   font-weight: 700;
   line-height: 145%;
 
-  @include respond-to(lg) {
+  @include respond-to(md) {
     font-size: 1.5rem;
     line-height: 150%;
   }

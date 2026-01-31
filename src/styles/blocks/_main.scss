@@ -39,4 +39,18 @@
       margin-top: 170px;
     }
   }
+
+  &__comments {
+    margin-top: 110px;
+    margin-inline: 30px;
+
+    @include respond-to(md) {
+      margin-top: 140px;
+      margin-inline: 0;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 170px;
+    }
+  }
 }
