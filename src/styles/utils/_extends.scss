@@ -113,6 +113,11 @@
   @include respond-to(md) {
     padding-inline: min(4vw, 34px);
   }
+
+  @include respond-to(lg) {
+    max-width: 1194px;
+    padding-inline: 0;
+  }
 }
 
 %base-grid-column {

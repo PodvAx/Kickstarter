@@ -98,10 +98,14 @@
     );
   }
 
-  &--secondary-unbordered-accent {
+  &--unbordered-accent {
     padding: 0;
     color: $text-accent-color;
     background-color: transparent;
+
+    @include base-interaction;
+
+    transition-property: color;
 
     &::after {
       content: '';
@@ -114,19 +118,24 @@
 
       background-color: $bg-color-accent-btn;
 
-      transition-property: width;
+      transition-property: width, background-color;
       @include base-interaction;
     }
 
     @include hover {
+      color: $text-accent-hovered-color;
       &::after {
         width: 100%;
+        background-color: $bg-color-accent-hover-btn;
       }
     }
 
     @include active {
+      color: $text-accent-hovered-color;
+
       &::after {
         width: 100%;
+        background-color: $bg-color-accent-hover-btn;
       }
     }
 
@@ -139,7 +148,7 @@
     }
   }
 
-  &--secondary-unbordered-neutral {
+  &--unbordered-neutral {
     @include button-text(
       $bg-color: transparent,
       $hover-bg-color: transparent,

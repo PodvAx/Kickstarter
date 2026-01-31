@@ -8,6 +8,10 @@
     margin: 0;
   }
 
+  @include respond-to(lg) {
+    margin-top: 60px;
+  }
+
   &__benefit {
     grid-column: 1 / -1;
 

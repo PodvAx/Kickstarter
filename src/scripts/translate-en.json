@@ -3,7 +3,8 @@
     "goto": "Go to the {pageName} page",
     "change-lng": "Change language to {lng}",
     "open": "Open {modal}",
-    "close": "Close {modal}"
+    "close": "Close {modal}",
+    "see": "See more about us"
   },
   "pages": {
     "main": "Main",
@@ -23,7 +24,10 @@
     "luna-speaker": "Luna speaker img",
     "close-icon": "Close icon",
     "compass": "Compass icon",
-    "speaker": "Speaker icon"
+    "speaker": "Speaker icon",
+    "meet": "Meet Luna image",
+    "design": "Designed for the future image",
+    "eye": "Luna eye image"
   },
   "common": {
     "buy": "Buy",
@@ -41,6 +45,10 @@
       "speaker": "Tweeter Speaker System",
       "wifi": "Multiroom System",
       "sun": "Intuitive Lighting System"
+    },
+    "article": {
+      "design": "Designed for the future",
+      "eye": "Luna Eye"
     }
   },
   "text": {
@@ -50,6 +58,10 @@
       "speaker": "To deliver a more layered sound performance better than a sole full-range speaker, our team equipped Luna with one more tweeter speaker responsible for high-frequency sound independently.",
       "wifi": "Luna is natively compatible with your home Wi-Fi. Set up multiple speakers in different rooms to expand your music experience into the entire house.",
       "sun": "An intuitive user interface allows you to adjust the hue and saturation of color for lighting that fits any mood and situation."
+    },
+    "article": {
+      "design": "In 2014, a group of geeky industrial designers, engineering veterans and acoustic experts formed crazybaby. This is a bunch of passionate people who are crazy enough to think they can challenge the industry with disruptive audio products.",
+      "eye": "Luna Eye is to the essence of this innovative light and audio system. It comprises an independent tweeter speaker, a light guiding component, a dome and a ring ornament."
     }
   }
 }

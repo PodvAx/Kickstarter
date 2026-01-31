@@ -8,4 +8,37 @@
       padding-block: 28px;
     }
   }
+
+  &__picture {
+    display: block;
+
+    width: fit-content;
+    height: fit-content;
+    margin-top: 110px;
+    margin-inline: auto;
+
+    @include respond-to(md) {
+      margin-top: 140px;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 170px;
+    }
+  }
+
+  &__article {
+    @extend %block-max-width;
+
+    margin-top: 110px;
+    margin-inline: 30px;
+
+    @include respond-to(md) {
+      margin-top: 140px;
+      margin-inline: 0;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 170px;
+    }
+  }
 }
