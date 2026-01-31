@@ -27,8 +27,6 @@
   }
 
   &__article {
-    @extend %block-max-width;
-
     margin-top: 110px;
     margin-inline: 30px;
 
