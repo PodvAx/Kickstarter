@@ -35,6 +35,21 @@
   }
 }
 
+@mixin base-grid-column {
+  display: grid;
+  grid-template-columns: repeat($column-grid-sm, 1fr);
+  column-gap: 20px;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat($column-grid-md, 1fr);
+    column-gap: 30px;
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat($column-grid-lg, 1fr);
+  }
+}
+
 @mixin button-text(
   $bg-color,
   $hover-bg-color,

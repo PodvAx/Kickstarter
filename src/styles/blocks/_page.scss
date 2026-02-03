@@ -6,22 +6,33 @@
   }
 
   &__header {
-    max-width: 1200px + 68px;
-    margin-inline: auto;
+    @extend %block-max-width;
 
     @include respond-to(md) {
       margin-top: 30px;
-      padding-inline: min(4vw, 34px);
     }
   }
 
   &__mobile-menu {
-    max-width: 1200px + 68px;
-    margin-inline: auto;
+    @extend %block-max-width;
 
     @include respond-to(md) {
       padding-top: 39px;
-      padding-inline: min(4vw, 34px);
+    }
+  }
+
+  &__main {
+    @extend %block-max-width;
+
+    overflow: hidden;
+    margin-top: 110px;
+
+    @include respond-to(md) {
+      margin-top: 140px;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 170px;
     }
   }
 }

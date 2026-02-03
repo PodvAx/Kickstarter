@@ -36,15 +36,18 @@
 
   &__title {
     grid-column: 1 / -1;
+    max-width: 13ch;
     margin: 40px 30px 0;
+    word-wrap: break-word;
 
     @include respond-to(md) {
       grid-column: 1 / 5;
       grid-row: 1 / span 1;
       align-self: end;
 
-      max-width: 10ch;
       margin: 0;
+
+      word-wrap: normal;
     }
   }
 
@@ -60,19 +63,15 @@
   }
 
   &__static {
-    display: grid;
+    @extend %base-grid-column;
+
     grid-auto-rows: min-content;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
 
     @include respond-to(md) {
-      grid-template-columns: repeat(8, 1fr);
-      column-gap: 30px;
       margin-top: 130px;
     }
 
     @include respond-to(lg) {
-      grid-template-columns: repeat(12, 1fr);
       margin-top: 90px;
     }
   }
