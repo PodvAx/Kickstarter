@@ -885,6 +885,64 @@
           </div>
         </div>
       </section>
+
+      <section class="contact-us main__contact-us">
+        <h2
+          class="contact-us__title"
+          data-translate="title.contact"
+        >
+          DO YOU HAVE ANY QUESTIONS?
+        </h2>
+
+        <form
+          class="contact-form contact-us__contact-form"
+          action="#"
+          method="post"
+          id="contact-form"
+        >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="text-input contact-form__text-input"
+            placeholder="Your email"
+            autocomplete="email"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            class="text-input text-input--textarea contact-form__text-input"
+            placeholder="Your message"
+          ></textarea>
+          <button
+            type="submit"
+            class="button button--primary-accent contact-form__button"
+          >
+            Send
+          </button>
+        </form>
+
+        <dialog
+          class="modal contact-us__modal"
+          id="success-message"
+        >
+          <h3 class="modal__title">Thanks for your message!</h3>
+          <p class="modal__message">
+            This message will not be sent to anyone because it is a demo.
+          </p>
+          <button
+            class="modal__close-button button button--icon"
+            data-translate-aria-label="navigation.close"
+            id="close-success-message-btn"
+          >
+            <img
+              src="src/images/icons/icon-close.svg"
+              data-translate-alt="imgs.close-icon"
+            />
+          </button>
+        </dialog>
+      </section>
     </main>
     <!-- #endregion main -->
 
@@ -900,6 +958,10 @@
     <script
       type="module"
       src="src/scripts/swiper.js"
+    ></script>
+    <script
+      type="module"
+      src="src/scripts/form-submit.js"
     ></script>
   </body>
 </html>

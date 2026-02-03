@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-console */
 import translationEnglish from './translate-en.json';
 import translationUkrainian from './translate-ua.json';

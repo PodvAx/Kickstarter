@@ -1,3 +1,5 @@
+'use strict';
+
 const ID_MOBILE_MENU = 'mobile-menu';
 const ID_MENU_OPEN_BTN = 'menu-btn';
 const ID_MENU_CLOSE_BTN = 'close-menu-btn';
