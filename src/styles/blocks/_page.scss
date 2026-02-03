@@ -24,6 +24,7 @@
   &__main {
     @extend %block-max-width;
 
+    overflow: hidden;
     margin-top: 110px;
 
     @include respond-to(md) {

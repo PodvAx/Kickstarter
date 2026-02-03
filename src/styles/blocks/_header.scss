@@ -36,15 +36,18 @@
 
   &__title {
     grid-column: 1 / -1;
+    max-width: 13ch;
     margin: 40px 30px 0;
+    word-wrap: break-word;
 
     @include respond-to(md) {
       grid-column: 1 / 5;
       grid-row: 1 / span 1;
       align-self: end;
 
-      max-width: 10ch;
       margin: 0;
+
+      word-wrap: normal;
     }
   }
 

@@ -4,7 +4,9 @@
     "change-lng": "Change language to {lng}",
     "open": "Open {modal}",
     "close": "Close {modal}",
-    "see": "See more about us"
+    "see": "See more about us",
+    "next": "Go to the next feature block",
+    "prev": "Go to the prev feature block"
   },
   "pages": {
     "main": "Main",
@@ -27,7 +29,8 @@
     "speaker": "Speaker icon",
     "meet": "Meet Luna image",
     "design": "Designed for the future image",
-    "eye": "Luna eye image"
+    "eye": "Luna eye image",
+    "feature": "Feature Luna image"
   },
   "common": {
     "buy": "Buy",
@@ -49,6 +52,11 @@
     "article": {
       "design": "Designed for the future",
       "eye": "Luna Eye"
+    },
+    "features": {
+      "connectivity": "Connectivity",
+      "sound": "Sound & Music",
+      "app": "App Features"
     }
   },
   "text": {
@@ -67,6 +75,28 @@
       "garrett": {
         "comment": "It really took me by surprise honestly to have such full beautiful sound that coming out of this small compact device. And with the brush aluminum surface, it feels so familiar. Like my iPhone.",
         "position": "Creative Director"
+      }
+    },
+    "features": {
+      "connectivity": {
+        "1": "Hands Free Wireless Audio",
+        "2": "Smart Multiroom System Set Up",
+        "3": "Party Mode with 6.0 Units and above",
+        "4": "MESHNET Multi Speaker Network"
+      },
+      "sound": {
+        "1": "Feel-in-chest Base Power",
+        "2": "Lossless Digital Audio Transmission",
+        "3": "Easy & Stable Stereo Pairing",
+        "4": "Crisp and Clear High Frequency Sound",
+        "5": "Streams from Cloud Music and Local Library",
+        "6": "Auto Music Playback from Last Song Stopped"
+      },
+      "app": {
+        "1": "Customize Music Schedule",
+        "2": "Wake Up with Favorite Songs",
+        "3": "Home Detection Auto Wake Up",
+        "4": "Color Wheel"
       }
     }
   }
