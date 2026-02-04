@@ -38,9 +38,7 @@ const handleMobileMenuClose = (e) => {
 };
 
 const handleAnchorClick = (e) => {
-  setTimeout(() => {
-    mobileMenu.close();
-  }, 500);
+  mobileMenu.close();
 };
 
 mobileMenu.addEventListener('close', handleMobileMenuClose);

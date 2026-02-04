@@ -361,6 +361,18 @@
     </dialog>
     <!-- #endregion Mobile Menu -->
 
+    <button
+      class="button button--icon page__button"
+      data-translate-aria-label="navigation.goTop"
+      id="to-top"
+    >
+      <img
+        src="src/images/icons/icon-arrow-up.svg"
+        alt="Arrow up"
+        data-translate-alt="imgs.arUp"
+      />
+    </button>
+
     <!-- #region main -->
     <main class="main page__main">
       <nav class="nav main__nav">
@@ -886,7 +898,10 @@
         </div>
       </section>
 
-      <section class="contact-us main__contact-us">
+      <section
+        class="contact-us main__contact-us"
+        id="contact"
+      >
         <h2
           class="contact-us__title"
           data-translate="title.contact"
@@ -946,6 +961,74 @@
     </main>
     <!-- #endregion main -->
 
+    <!-- #region footer -->
+    <footer class="footer page__footer">
+      <a
+        href="#"
+        class="logo footer__logo"
+        role="anchor"
+        data-translate-aria-label="navigation.goto"
+        data-translate-vars='{"pageName": "pages.main"}'
+      >
+        <img
+          src="src/images/icons/icon_logo.svg"
+          alt="CrazyBaby logo"
+          class="logo__icon"
+          data-translate-alt="imgs.logo"
+        />
+      </a>
+
+      <div class="footer__links">
+        <a
+          href="https://www.facebook.com/hicrazybaby/"
+          target="_blank"
+          class="footer__link button button--icon"
+          data-translate-aria-label="navigation.goto"
+          data-translate-vars='{"pageName": "pages.facebook"}'
+        >
+          <img
+            src="src/images/icons/icon-fb.svg"
+            alt="Facebook icon"
+            class="footer__icon"
+            data-translate-alt="imgs.fb"
+          />
+        </a>
+        <a
+          href="https://x.com/crazybabyaudio"
+          class="footer__link button button--icon"
+          data-translate-aria-label="navigation.goto"
+          data-translate-vars='{"pageName": "pages.x"}'
+          target="_blank"
+        >
+          <img
+            src="src/images/icons/icon-twitter.svg"
+            alt="Twitter icon"
+            class="footer__icon"
+            data-translate-alt="imgs.x"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/crazybaby/"
+          class="footer__link button button--icon"
+          data-translate-aria-label="navigation.goto"
+          data-translate-vars='{"pageName": "pages.inst"}'
+          target="_blank"
+        >
+          <img
+            src="src/images/icons/icon-inst.svg"
+            alt="Instagram icon"
+            class="footer__icon"
+            data-translate-alt="imgs.inst"
+          />
+        </a>
+      </div>
+
+      <p class="footer__rights">
+        © 2019 All rights reserved. Terms of Use & Privacy Policy
+      </p>
+    </footer>
+    <!-- #endregion -->
+
     <script src="src/scripts/main.js"></script>
     <script
       type="module"
@@ -962,6 +1045,10 @@
     <script
       type="module"
       src="src/scripts/form-submit.js"
+    ></script>
+    <script
+      type="module"
+      src="src/scripts/to-top.js"
     ></script>
   </body>
 </html>
