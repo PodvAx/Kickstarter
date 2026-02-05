@@ -13,13 +13,13 @@
     }
   }
 
-  &__mobile-menu {
-    @extend %block-max-width;
+  // &__mobile-menu {
+  //   @extend %block-max-width;
 
-    @include respond-to(md) {
-      padding-top: 39px;
-    }
-  }
+  //   @include respond-to(md) {
+  //     padding-top: 39px;
+  //   }
+  // }
 
   &__main {
     @extend %block-max-width;

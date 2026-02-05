@@ -227,140 +227,145 @@
     <!-- #endregion Header -->
 
     <!-- #region Mobile Menu -->
-    <dialog
+    <div
       class="mobile-menu page__mobile-menu"
       id="mobile-menu"
       data-translate-aria-label="common.menu"
+      role="dialog"
+      aria-modal="true"
+      inert="true"
     >
-      <header class="header mobile-menu__header">
-        <section class="header__interactive">
+      <div class="mobile-menu__content">
+        <header class="header mobile-menu__header">
+          <section class="header__interactive">
+            <a
+              href="#"
+              class="logo header__logo"
+              data-translate-aria-label="navigation.goto"
+              data-translate-vars='{"pageName": "pages.main"}'
+            >
+              <img
+                src="src/images/icons/icon_logo.svg"
+                alt="CrazyBaby logo"
+                class="logo__icon"
+                data-translate-alt="imgs.logo"
+              />
+            </a>
+
+            <button
+              class="button button--icon header__menu-btn"
+              id="close-menu-btn"
+              role="button"
+              data-translate-aria-label="navigation.close"
+              data-translate-vars='{"modal": "common.menu"}'
+            >
+              <img
+                src="src/images/icons/icon-close.svg"
+                alt="Close icon"
+                class="button__icon"
+                data-translate-alt="imgs.close-icon"
+              />
+            </button>
+          </section>
+        </header>
+
+        <nav class="nav mobile-menu__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#our-story"
+                class="nav__link button button--thirdary"
+                data-translate-aria-label="navigation.goto"
+                data-translate-vars='{"pageName": "pages.story"}'
+                data-translate-text="pages.story"
+              >
+                Our Story
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a
+                href="#about-us"
+                class="nav__link button button--thirdary"
+                data-translate-aria-label="navigation.goto"
+                data-translate-vars='{"pageName": "pages.about"}'
+                data-translate-text="pages.about"
+              >
+                About Us
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a
+                href="#features"
+                class="nav__link button button--thirdary"
+                data-translate-aria-label="navigation.goto"
+                data-translate-vars='{"pageName": "pages.features"}'
+                data-translate-text="pages.features"
+              >
+                Features
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a
+                href="#contact"
+                class="nav__link button button--thirdary"
+                data-translate-aria-label="navigation.goto"
+                data-translate-vars='{"pageName": "pages.contact"}'
+                data-translate-text="special.contact"
+              >
+                Get in Touch
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu__options">
           <a
-            href="#"
-            class="logo header__logo"
+            href="#specs"
+            class="button button--thirdary"
+            data-translate-text="special.specs-btn"
             data-translate-aria-label="navigation.goto"
-            data-translate-vars='{"pageName": "pages.main"}'
+            data-translate-vars='{"pageName": "pages.specs"}'
           >
-            <img
-              src="src/images/icons/icon_logo.svg"
-              alt="CrazyBaby logo"
-              class="logo__icon"
-              data-translate-alt="imgs.logo"
-            />
+            Specs
           </a>
 
-          <button
-            class="button button--icon header__menu-btn"
-            id="close-menu-btn"
-            role="button"
-            data-translate-aria-label="navigation.close"
-            data-translate-vars='{"modal": "common.menu"}'
-          >
-            <img
-              src="src/images/icons/icon-close.svg"
-              alt="Close icon"
-              class="button__icon"
-              data-translate-alt="imgs.close-icon"
-            />
-          </button>
-        </section>
-      </header>
-
-      <nav class="nav mobile-menu__nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a
-              href="#our-story"
-              class="nav__link button button--thirdary"
-              data-translate-aria-label="navigation.goto"
-              data-translate-vars='{"pageName": "pages.story"}'
-              data-translate-text="pages.story"
+          <div class="language-selector mobile-menu__language-selector">
+            <button
+              class="button button--thirdary language-selector__button language-selector__button--selected"
+              data-translate-aria-label="navigation.change-lng"
+              data-translate-vars='{"lng": "languages.en"}'
+              data-action="translate-en"
             >
-              Our Story
-            </a>
-          </li>
+              En
+            </button>
 
-          <li class="nav__item">
-            <a
-              href="#about-us"
-              class="nav__link button button--thirdary"
-              data-translate-aria-label="navigation.goto"
-              data-translate-vars='{"pageName": "pages.about"}'
-              data-translate-text="pages.about"
+            /
+
+            <button
+              class="button button--thirdary language-selector__button"
+              role="button"
+              data-translate-aria-label="navigation.change-lng"
+              data-translate-vars='{"lng": "languages.ua"}'
+              data-action="translate-ua"
             >
-              About Us
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a
-              href="#features"
-              class="nav__link button button--thirdary"
-              data-translate-aria-label="navigation.goto"
-              data-translate-vars='{"pageName": "pages.features"}'
-              data-translate-text="pages.features"
-            >
-              Features
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a
-              href="#contact"
-              class="nav__link button button--thirdary"
-              data-translate-aria-label="navigation.goto"
-              data-translate-vars='{"pageName": "pages.contact"}'
-              data-translate-text="special.contact"
-            >
-              Get in Touch
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="mobile-menu__options">
-        <a
-          href="#specs"
-          class="button button--thirdary"
-          data-translate-text="special.specs-btn"
-          data-translate-aria-label="navigation.goto"
-          data-translate-vars='{"pageName": "pages.specs"}'
-        >
-          Specs
-        </a>
-
-        <div class="language-selector mobile-menu__language-selector">
-          <button
-            class="button button--thirdary language-selector__button language-selector__button--selected"
-            data-translate-aria-label="navigation.change-lng"
-            data-translate-vars='{"lng": "languages.en"}'
-            data-action="translate-en"
-          >
-            En
-          </button>
-
-          /
-
-          <button
-            class="button button--thirdary language-selector__button"
-            role="button"
-            data-translate-aria-label="navigation.change-lng"
-            data-translate-vars='{"lng": "languages.ua"}'
-            data-action="translate-ua"
-          >
-            Ua
-          </button>
+              Ua
+            </button>
+          </div>
         </div>
-      </div>
 
-      <a
-        href="#contact"
-        class="button button--primary-neutral mobile-menu__buy-btn"
-        data-translate-aria-label="special.buy-btn"
-        data-translate-text="common.buy"
-      >
-        Buy
-      </a>
-    </dialog>
+        <a
+          href="#contact"
+          class="button button--primary-neutral mobile-menu__buy-btn"
+          data-translate-aria-label="special.buy-btn"
+          data-translate-text="common.buy"
+        >
+          Buy
+        </a>
+      </div>
+    </div>
     <!-- #endregion Mobile Menu -->
 
     <!-- #region main -->
