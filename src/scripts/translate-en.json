@@ -42,7 +42,8 @@
   },
   "common": {
     "buy": "Buy",
-    "menu": "Menu"
+    "menu": "Menu",
+    "send": "Send"
   },
   "special": {
     "specs-btn": "Specs",
@@ -108,5 +109,9 @@
         "4": "Color Wheel"
       }
     }
+  },
+  "placeholder": {
+    "email": "Your email",
+    "message": "Your message"
   }
 }
