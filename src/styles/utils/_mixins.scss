@@ -1,6 +1,6 @@
 @mixin base-interaction {
   transition-timing-function: ease;
-  transition-duration: 0.3s;
+  transition-duration: $transiton-short;
 
   -webkit-tap-highlight-color: transparent;
 }

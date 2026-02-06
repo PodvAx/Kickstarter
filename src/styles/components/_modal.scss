@@ -1,18 +1,36 @@
 .modal {
+  pointer-events: none;
+
   position: fixed;
   z-index: $z-index-last;
   inset: 0;
-  animation: fade-out 0.7s ease-out;
 
-  &::backdrop {
-    position: fixed;
-    inset: 0;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &--open {
+    pointer-events: all;
+    opacity: 1;
   }
 
-  &:open {
-    animation: fade-in 0.7s ease-out;
+  &__content {
+    position: relative;
+
+    padding: 1rem;
+    border: 3px solid $color-green-500;
+
+    opacity: 0;
+    background-color: $page-bg-color;
+
+    transition: opacity $transition-long ease-out;
+
+    &--visible {
+      opacity: 1;
+    }
   }
 
   &__close-button {

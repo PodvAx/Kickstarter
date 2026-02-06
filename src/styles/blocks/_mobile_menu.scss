@@ -27,8 +27,8 @@
     background-color: $page-bg-color;
 
     transition:
-      transform 0.7s ease-out,
-      opacity 0.7s ease-out;
+      transform $transition-long ease-out,
+      opacity $transition-long ease-out;
 
     &--visible {
       transform: translateX(0);

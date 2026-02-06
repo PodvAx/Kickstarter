@@ -323,7 +323,7 @@
 
         <div class="mobile-menu__options">
           <a
-            href="#specs"
+            href="#features"
             class="button button--thirdary"
             data-translate-text="special.specs-btn"
             data-translate-aria-label="navigation.goto"
@@ -936,25 +936,31 @@
           </button>
         </form>
 
-        <dialog
+        <div
           class="modal contact-us__modal"
+          role="modal"
+          inert="true"
           id="success-message"
+          aria-label="modal success message"
+          aria-modal="true"
         >
-          <h3 class="modal__title">Thanks for your message!</h3>
-          <p class="modal__message">
-            This message will not be sent to anyone because it is a demo.
-          </p>
-          <button
-            class="modal__close-button button button--icon"
-            data-translate-aria-label="navigation.close"
-            id="close-success-message-btn"
-          >
-            <img
-              src="src/images/icons/icon-close.svg"
-              data-translate-alt="imgs.close-icon"
-            />
-          </button>
-        </dialog>
+          <div class="modal__content">
+            <h3 class="modal__title">Thanks for your message!</h3>
+            <p class="modal__message">
+              This message will not be sent to anyone because it is a demo.
+            </p>
+            <button
+              class="modal__close-button button button--icon"
+              data-translate-aria-label="navigation.close"
+              id="close-success-message-btn"
+            >
+              <img
+                src="src/images/icons/icon-close.svg"
+                data-translate-alt="imgs.close-icon"
+              />
+            </button>
+          </div>
+        </div>
       </section>
     </main>
     <!-- #endregion main -->
